@@ -12,7 +12,9 @@ EXPOSE 3449
 
 EXPOSE 7888
 
-WORKDOR /usr/src/app
+WORKDIR /clj
+ADD . /clj
+VOLUME /clj
 
 RUN lein deps
 RUN lein cljsbuild once dev
