@@ -5,15 +5,15 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :min-lein-version "2.5.3"
-  
+
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.170"]
                  [org.clojure/core.async "0.2.374"
                   :exclusions [org.clojure/tools.reader]]
-		 [com.cemerick/piggieback "0.2.1"]
-		 [org.clojure/tools.nrepl "0.2.10"]]
+                 [com.cemerick/piggieback "0.2.1"]
+                 [org.clojure/tools.nrepl "0.2.10"]]
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-  
+
   :plugins [[lein-figwheel "0.5.0-6"]
             [lein-cljsbuild "1.1.2" :exclusions [[org.clojure/clojure]]]]
 
@@ -27,7 +27,7 @@
 
                 ;; If no code is to be run, set :figwheel true for continued automagical reloading
                 :figwheel {:on-jsload "blarg.core/on-js-reload"}
-			   :websocket-host "172.17.0.1"
+                :websocket-host "172.17.0.1"
 
                 :compiler {:main blarg.core
                            :asset-path "js/compiled/out"
@@ -49,7 +49,7 @@
              ;; :server-ip "127.0.0.1"
 
              :css-dirs ["resources/public/css"] ;; watch and update CSS
-	     :nrepl-host "0.0.0.0" 
+             :nrepl-host "0.0.0.0" 
 
              ;; Start an nREPL server into the running figwheel process
              :nrepl-port 7888
